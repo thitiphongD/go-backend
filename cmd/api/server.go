@@ -7,7 +7,6 @@ import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
 	"github.com/thitiphongD/go-backend/database"
-	"github.com/thitiphongD/go-backend/routes"
 )
 
 func main() {
@@ -27,8 +26,6 @@ func main() {
 		AllowHeaders:     "Content-Type,Authorization,Accept,Origin,Access-Control-Request-Method,Access-Control-Request-Headers,Access-Control-Allow-Origin,Access-Control-Allow-Headers,Access-Control-Allow-Methods,Access-Control-Expose-Headers,Access-Control-Max-Age,Access-Control-Allow-Credentials",
 		AllowCredentials: true,
 	}))
-
-	routes.SetUpRoutes(app)
 
 	app.Listen(":3010")
 }
